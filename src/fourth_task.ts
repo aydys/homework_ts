@@ -1,4 +1,10 @@
-type FIXME = any;
+interface FilteredOrder {
+  state: string,
+  sum: number,
+  workedId?: number
+}
+
+type FIXME = FilteredOrder;
 
 type Order =
   | {

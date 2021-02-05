@@ -1,4 +1,4 @@
-type FIXME = any;
+type FIXME = string[];
 
 const orderStates = [
   "initial",
