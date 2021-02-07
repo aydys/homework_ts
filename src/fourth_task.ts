@@ -1,4 +1,12 @@
-type FIXME = any;
+type ExcludedOrders = | {
+  state: "initial";
+  sum: number;
+}
+| {
+  state: "inWork";
+  sum: number;
+  workerId: number;
+}
 
 type Order =
   | {
@@ -32,7 +40,7 @@ type Order =
       fullfillmentDate: Date;
     };
 
-export const filterOnlyInitialAndInWorkOrder = (order: Order): FIXME => {
+export const filterOnlyInitialAndInWorkOrder = (order: Order): Extract<Order, ExcludedOrders>  => {
   if (order.state === "initial" || order.state === "inWork") {
     return order;
   }

@@ -1,4 +1,5 @@
-type FIXME = any;
+type FilteredElements = "initial" | "inWork" | "fullfilled"
+type FIXME = FilteredElements[];
 
 const orderStates = [
   "initial",
