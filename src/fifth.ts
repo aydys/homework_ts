@@ -1,4 +1,6 @@
-type FIXME = any;
+type States = "initial" | "inWork" | "buyingSupplies" | "producing" | "fullfilled";
+type FilteredStates = Exclude<States, "buingSupplies" | "prodicing">
+type FIXME = FilteredStates[];
 
 const orderStates = [
   "initial",
